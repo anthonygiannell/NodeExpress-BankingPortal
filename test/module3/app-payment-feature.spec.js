@@ -84,7 +84,7 @@ describe('Payment Feature', () => {
       'The content being passed to `writeFileSync` is not a string.'
     );
     assert(
-      writeFileSyncStub.firstCall.args[2].replace('-', '').toLowerCase() === 'utf8',
+      writeFileSyncStub.firstCall.args[2].encoding.replace('-', '').toLowerCase() === 'utf8',
       'It is best if you encode the string as utf8.'
     );
   });
