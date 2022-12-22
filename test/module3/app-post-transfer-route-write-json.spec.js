@@ -42,7 +42,7 @@ describe('Transfer post route write JSON', () => {
     );
     assert(typeof writeFileSyncStub.firstCall.args[2] !== 'undefined', 'It is best if you encode the string as utf8.');
     assert(
-      writeFileSyncStub.firstCall.args[2].encoding.replace('-', '').toLowerCase() === 'utf8',
+      writeFileSyncStub.firstCall.args[2].replace('-', '').toLowerCase() === 'utf8',
       'It is best if you encode the string as utf8.'
     );
   });
